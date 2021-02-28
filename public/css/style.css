@@ -1,40 +1,45 @@
 /* declarar variable para un color */
-:root{
-    --main-bg-color: #2C3D50;
-}
 /* se deslice con estilo suave */
-html{
-scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
+
 /* cambiar el color de los bg-dark */
-.bg-dark{background-color: var(--main-bg-color) !important;}
+.bg-dark {
+  background-color: var(#2C3D50) !important;
+}
 
 /* modificar el estilo de los hr con una linea negra*/
-hr{
-    width: 100px; border:2px solid black;
+hr {
+  width: 100px;
+  border: 2px solid black;
 }
+
 /* colocar los parrafos con letras blancas */
-p{
-    color: white;
+p {
+  color: white;
 }
+
 /* modificar el textarea del formulario */
-input.form-control, textarea.form-control{
-     border:none !important;
-     border-radius: 0 !important; 
-     border-bottom: 1px solid #ccc !important;
+input.form-control, textarea.form-control {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #ccc !important;
 }
+
 /* modificar los btn-primary */
-.btn-primary{
-    border-color: #5CBDBC !important;
-    background-color: #2BBA88 !important ;
+.btn-primary {
+  border-color: #5CBDBC !important;
+  background-color: #2BBA88 !important;
 }
+
 /* cambiar el color del footer */
-footer{
-    background-color: var(--main-bg-color);
+footer {
+  background-color: var(#2C3D50);
 }
 /* cambiar el color de los h3 del footer */
-footer h3{
-    color:white;
-
+footer h3 {
+  color: white;
 }
 
+/*# sourceMappingURL=style.css.map */
