@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/portafolio', function () {
     return view('portafolio');
 });
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
