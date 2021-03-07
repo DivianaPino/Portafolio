@@ -62,32 +62,59 @@
                 <h2>PORTAFOLIO</h2>
                 <hr>
             </div>
-            <div class="col-md-4 text-center mt-2  ">
+            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-2  ">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-2 ">
+            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-2 ">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-2 ">
+            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-2 ">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-5">
+            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-5">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-5">
+            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-5">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-5">
+            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-5">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-5">
+            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-5">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-5">
+            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-5">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
-            <div class="col-4 text-center mt-5">
+            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-5">
+                <h2>Primer Proyecto</h2>
                 <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
+                    dolor.</p>
             </div>
 
         </div>

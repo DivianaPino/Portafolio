@@ -22,3 +22,10 @@ Route::get('/portafolio', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/admin/portafolio', 'Admin\ProjectsController@index')->name('admin.portafolio.index'); //index es el metodo del controlador que se llamara
+
+Route::post('/admin/portafolio/store', 'Admin\ProjectsController@store')->name('admin.portafolio.store'); //store es el metodo del controlador que se llamara
+
+
+

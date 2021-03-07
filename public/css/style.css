@@ -36,10 +36,14 @@ input.form-control, textarea.form-control {
 /* cambiar el color del footer */
 footer {
   background-color: var(#2C3D50);
+  /* cambiar el color de los h3 del footer */
 }
-/* cambiar el color de los h3 del footer */
 footer h3 {
   color: white;
+}
+
+#portafolio p {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
