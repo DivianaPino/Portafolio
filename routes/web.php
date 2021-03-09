@@ -29,3 +29,5 @@ Route::get('/admin/portafolio/{projectId}/edit', 'Admin\ProjectsController@edit'
 
 Route::post('/admin/portafolio/{projectId}/update', 'Admin\ProjectsController@update')->name('admin.portafolio.update'); 
 
+Route::delete('/admin/portafolio/{projectId}/delete', 'Admin\ProjectsController@delete')->name('admin.portafolio.delete'); 
+

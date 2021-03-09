@@ -42,10 +42,17 @@
                                 </td>
                                 <td>{{$project->description}}</td>
                                 <td>
+                                <!-- EDITAR -->
                                 <a href="{{route('admin.portafolio.edit', $project->id)}}" class="btn btn-warning">Editar</a>
-                                <form>
-                                   <button class="btn btn-danger">Eliminar</button>
+                                <!-- ELIMINAR -->
+                                <form action="{{route('admin.portafolio.delete' , $project->id)}}" method="POST">
+                                    {{ csrf_field() }}
+                                    <!--  Token para la seguridad de nuestra pagina (solución error 419) -->
+                                    <input type="hidden" name="_method" value="delete" />
+                                    <button class="btn btn-danger">Eliminar</button>
                                 </form>
+                                         
+                                
                                 
                               </td>
                             </tr>
