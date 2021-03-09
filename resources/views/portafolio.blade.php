@@ -56,67 +56,19 @@
     </header>
 
     <!----------------------------SECTION 1 (PORTAFOLIO)-------------------------------->
-    <section class="container" id="portafolio">
+    <section class="container" id="portafolio" name="portafolio">
         <div class="row  justify-content-center mb-5">
             <div class="col-12 text-center mt-5 ">
                 <h2>PORTAFOLIO</h2>
                 <hr>
             </div>
+            @foreach($projects as $project)
             <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-2  ">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
+                <h2>{{$project->title}}</h2>
+                <img src="{{asset('images/portafolio/'.$project->featured)}}"  alt="{{$project->title}}"  >
+                <p>{{$project->description}}</p>
             </div>
-            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-2 ">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-2 ">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-5">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-5">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-5">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-5">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4  text-center mt-5">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 text-center mt-5">
-                <h2>Primer Proyecto</h2>
-                <img src="{{asset('imagenes/casa.png')}}" width="250px" alt="Opcion Casa">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet exercitationem quae non ullam
-                    dolor.</p>
-            </div>
-
+            @endforeach
         </div>
     </section>
     <!----------------------------SECTION 2 (ABOUT)-------------------------------->

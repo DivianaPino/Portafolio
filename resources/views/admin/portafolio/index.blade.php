@@ -7,13 +7,10 @@
         <!-- TABLE: LATEST ORDERS -->
         <div class="card">
             <div class="card-header border-transparent">
-                <h3 class="card-title">Latest Orders
+                <h3 class="card-title">Lista de Proyectos
                     <button type="button" class="ml-4 btn btn-sm btn-primary" data-toggle="modal"
                         data-target="#exampleModal" data-whatever="@mdo">Crear Proyecto</button>
                 </h3>
-
-
-
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                         <i class="fas fa-minus"></i>
@@ -38,16 +35,19 @@
                         <tbody>
                             @foreach($projects as $project)
                             <tr>
-                                <td>{{ $project->title}}</td>
+                                <td>{{$project->title}}</td>
                                 <td>
                                     <img src="{{asset('images/portafolio/'.$project->featured)}}"
-                                        class="img-fluid imag-rounded" width="120px" alt="{{$project->title}}">
+                                        class="img-fluid img-rounded" width="120px" alt="{{$project->title}}">
                                 </td>
-                                <td>{{ $project->description}}</td>
+                                <td>{{$project->description}}</td>
                                 <td>
-                                    <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63
-                                    </div>
-                                </td>
+                                <a href="{{route('admin.portafolio.edit', $project->id)}}" class="btn btn-warning">Editar</a>
+                                <form>
+                                   <button class="btn btn-danger">Eliminar</button>
+                                </form>
+                                
+                              </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -56,10 +56,10 @@
                 <!-- /.table-responsive -->
             </div>
             <!-- /.card-body -->
-            <div class="card-footer clearfix">
+            <!-- <div class="card-footer clearfix">
                 <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
                 <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
-            </div>
+            </div> -->
             <!-- /.card-footer -->
         </div>
         <!-- /.card -->

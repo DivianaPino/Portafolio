@@ -8,12 +8,20 @@ use Illuminate\Http\Request;
 // Importamos nuestro modelo 
 use App\Models\Project;
 
+//importamos la clase validator
+
+use Validator;
+
 class ProjectsController extends Controller
+
+//------------------------METODO INDEX---------------------
 {
     public function index(){
         $projects=Project::all(); //trae todos los elementos que se encuentran en la tabla Project y guardalos en la variable "$projects"
         return view ('admin.portafolio.index', ['projects' => $projects]); //mostrar los proyectos en dicha vista 
     }
+
+    //------------------------METODO STORE---------------------
 
     public function store(Request $request){
         //  dd($request->all());
@@ -34,6 +42,55 @@ class ProjectsController extends Controller
          $new_project->save();
 
          return redirect()->route('admin.portafolio.index');  //Redigir la vista despues de guardar 
+         
+    }
+
+     //------------------------METODO EDIT---------------------
+
+    public function edit($projectId) {
+        $project = Project::find($projectId);
+        return view('admin.portafolio.edit', ['project' => $project]);
+    }
+
+    //------------------------METODO UPDATE---------------------
+
+    public function update(Request $request, $projectId) {
+        //  dd($request->all());
+
+        $project = Project::find($projectId);  //buscar el proyecto que se va a editar por su id 
+        // LA VALIDACIÓN:
+        $rules = [
+            'title' => 'required|',
+            'description' => 'required',
+            //la imagen no, ya que el usuario puede ser que no quiera actualizarla
+        ];
+
+        $validator = Validator::make($request->all(), $rules); //verificar si los campos que viene en la request cumplen con las reglas 
+
+        //si una validacion falla se hace lo siguiente: se redireccion a la vista anterior con los errores y con el validator
+        if($validator->fails())  
+        {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        if($request->hasFile('imgFeatured'))
+        {
+            $file = $request->file('imgFeatured');
+            $random_name = time();
+            $destinationPath = 'images/portafolio/';
+            $extension = $file->getClientOriginalExtension();
+            $filename = $random_name.'-'.$file->getClientOriginalName();
+            $uploadSuccess = $request->file('imgFeatured')->move($destinationPath, $filename);
+            $project->featured = $filename;
+        }
+        // unlink($destinationPath.$talent->featured);
+
+        $project->title = $request->title;
+        $project->description = $request->description;
+
+        $project->save();
+
+        return redirect()->route('admin.portafolio.index');
     }
 
 

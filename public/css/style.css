@@ -45,5 +45,9 @@ footer h3 {
 #portafolio p {
   color: black;
 }
+#portafolio img {
+  width: 250px;
+  height: 250px;
+}
 
 /*# sourceMappingURL=style.css.map */
